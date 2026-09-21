@@ -20,7 +20,7 @@ try:
         with col:
             st.subheader(row.get("Producto", "Sin nombre"))
             if "Imagen" in row and pd.notna(row["Imagen"]):
-                st.image(row["Imagen"], use_column_width=True)
+                st.image(row["Imagen"], use_container_width=True)
             st.write(f"**Precio:** {row.get('Precio', 'Consultar')}")
             st.write(f"**Stock:** {row.get('Stock', 'Disponible')}")
             st.button(f"Comprar {row.get('Producto', '')}", key=f"btn_{index}")
